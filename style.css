@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #0052cc;
+  color: #fff;
+  cursor: pointer;
+}
