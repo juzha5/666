@@ -3,15 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Static Site</title>
+  <title>书影清赏 ·《慈禧：开启现代中国的皇太后》</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <h1>Hello Pages</h1>
-    <p>这是一个最小静态站点。</p>
-    <button id="btn">点我</button>
-  </main>
+  <div class="page-container">
+    <!-- 顶部极简题头 -->
+    <header class="header">
+      <div class="seal">书影</div>
+      <div class="header-text">
+        <h1 class="site-title">《慈禧：开启现代中国的皇太后》</h1>
+        <p class="site-subtitle">张戎 著 · 文献与书页存览</p>
+      </div>
+      <div class="header-actions">
+        <button id="view-toggle-btn" class="btn-subtle" title="切换排版视图" type="button">
+          <span class="icon">⊞</span> <span id="view-mode-text">单列聚焦</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 导言简述 -->
+    <section class="intro-card">
+      <blockquote class="intro-quote">
+        “翻开泛黄的书页，重构风云激荡的历史瞬间。在笔墨与铅字之间，探寻晚清风貌与人物心绪。”
+      </blockquote>
+      <div class="intro-meta">
+        <span class="tag">历史传记</span>
+        <span class="tag">中文繁体版</span>
+        <span class="tag">书影三则</span>
+      </div>
+    </section>
+
+    <!-- 图片展示区 -->
+    <main class="gallery-section">
+      <div class="section-title-wrap">
+        <span class="line"></span>
+        <h2 class="section-title">画卷图览</h2>
+        <span class="line"></span>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- 图 1：封面 -->
+        <article class="photo-card" data-index="0">
+          <div class="photo-frame" role="button" tabindex="0" title="点击查看大图">
+            <img 
+              src="pics/cixi01 (3).jfif" 
+              alt="书籍封面 - 慈禧：开启现代中国的皇太后" 
+              class="photo-img" 
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <span class="zoom-tip">点击查看大图</span>
+            </div>
+          </div>
+          <div class="photo-info">
+            <div class="photo-header">
+              <span class="photo-no">01 / 封面</span>
+              <h3 class="photo-title">书影装帧</h3>
+            </div>
+            <p class="photo-desc">
+              书籍封面设计以清代慈禧太后正面朝服肖像为核心视觉，标题采用典雅红底黑字印章风排版，沉稳厚重。
+            </p>
+            <div class="card-footer">
+              <button class="btn-preview" data-index="0" type="button">查看大图</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 2：扉页 -->
+        <article class="photo-card" data-index="1">
+          <div class="photo-frame" role="button" tabindex="0" title="点击查看大图">
+            <img 
+              src="pics/cixi01 (2).jfif" 
+              alt="书籍扉页" 
+              class="photo-img" 
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <span class="zoom-tip">点击查看大图</span>
+            </div>
+          </div>
+          <div class="photo-info">
+            <div class="photo-header">
+              <span class="photo-no">02 / 扉页</span>
+              <h3 class="photo-title">内封题名</h3>
+            </div>
+            <p class="photo-desc">
+              扉页留白疏朗，垂直居中排布书名、著译者信息与出版印记，流露淡雅的书卷气韵。
+            </p>
+            <div class="card-footer">
+              <button class="btn-preview" data-index="1" type="button">查看大图</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 3：正文书页 -->
+        <article class="photo-card" data-index="2">
+          <div class="photo-frame" role="button" tabindex="0" title="点击查看大图">
+            <img 
+              src="pics/cixi01 (1).jfif" 
+              alt="书籍内页 - 正文叙述" 
+              class="photo-img" 
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <span class="zoom-tip">点击查看大图</span>
+            </div>
+          </div>
+          <div class="photo-info">
+            <div class="photo-header">
+              <span class="photo-no">03 / 书页</span>
+              <h3 class="photo-title">正文选读</h3>
+            </div>
+            <p class="photo-desc">
+              传统繁体直排文字版式，记载同治年间慈禧太后、常胜军戈登与平定太平天国相关历史细节，字里行间见史海沉浮。
+            </p>
+            <div class="card-footer">
+              <button class="btn-preview" data-index="2" type="button">查看大图</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- 底部互动条 -->
+    <aside class="interactive-box">
+      <div class="interactive-inner">
+        <div class="quote-symbol">❝</div>
+        <p id="quote-display">“历史的细节往往藏在字里行间。”</p>
+        <button id="btn" class="btn-primary" type="button">随览感怀</button>
+      </div>
+    </aside>
+
+    <!-- 藏书结缘转让信息条 -->
+    <section class="trade-card">
+      <div class="trade-badge">典籍转让</div>
+      <p class="trade-text">我有此书，需要的联系，价格人民币 <strong>400</strong> 元</p>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <p>素笺淡墨 · 典籍存真</p>
+    </footer>
+  </div>
+
+  <!-- 灯箱大图浏览弹窗 (Lightbox Modal) 默认隐藏 -->
+  <div id="lightbox" class="lightbox" style="display: none;" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" title="关闭 (Esc)" type="button">✕</button>
+      <button class="lightbox-nav prev" id="lightbox-prev" title="上一张 (←)" type="button">‹</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="大图预览" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-nav next" id="lightbox-next" title="下一张 (→)" type="button">›</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
